@@ -1,2 +1,6 @@
 server:
   port: 8082
+
+hello.service:
+  name: hello-service
+  url: http://localhost:8081
