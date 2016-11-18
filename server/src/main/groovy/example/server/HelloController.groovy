@@ -10,7 +10,7 @@ class HelloController {
     @Autowired
     HelloRepository helloRepository
 
-    @GetMapping(value = 'hello')
+    @GetMapping(value = '/hello')
     Hello helloWorld() {
         helloRepository.create('world')
     }

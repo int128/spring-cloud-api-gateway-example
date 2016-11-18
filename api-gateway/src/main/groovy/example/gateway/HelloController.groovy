@@ -11,7 +11,7 @@ class HelloController {
     @Inject
     HelloClient client
 
-    @GetMapping(value = 'hello')
+    @GetMapping(value = '/hello')
     Hello helloWorld() {
         client.helloWorld()
     }
