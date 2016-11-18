@@ -1,3 +1,7 @@
 hello.service:
   name: api-gateway-service
   url: http://localhost:8082
+
+# https://github.com/Netflix/Hystrix/wiki/Configuration#execution.isolation.thread.timeoutInMilliseconds
+hystrix.command.default:
+  execution.isolation.thread.timeoutInMilliseconds: 3000

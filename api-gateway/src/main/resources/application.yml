@@ -4,3 +4,7 @@ server:
 hello.service:
   name: hello-service
   url: http://localhost:8081
+
+# https://github.com/Netflix/Hystrix/wiki/Configuration#execution.isolation.thread.timeoutInMilliseconds
+hystrix.command.default:
+  execution.isolation.thread.timeoutInMilliseconds: 3000

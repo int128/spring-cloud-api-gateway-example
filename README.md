@@ -11,7 +11,9 @@ An example of API gateway with Spring Cloud.
 - `api-gateway`
   - A couple of REST server and client
   - Spring Boot Web
-  - Spring Cloud Feign
+  - Feign
+  - Hystrix
 - `client`
   - A simple REST client
-  - Spring Cloud Feign
+  - Feign
+  - Hystrix
