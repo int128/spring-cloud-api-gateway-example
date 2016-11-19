@@ -11,13 +11,23 @@ class HelloController {
     @Inject
     HelloClient client
 
-    @GetMapping(value = '/hello')
+    @GetMapping('/hello')
     Hello helloWorld() {
         client.helloWorld()
     }
 
-    @GetMapping(value = '/hello/{name}')
+    @GetMapping('/hello/{name}')
     Hello helloByName(@PathVariable String name) {
         client.helloByName(name)
+    }
+
+    @GetMapping('/wait/{milliseconds}')
+    long waitMillis(@PathVariable long milliseconds) {
+        client.waitMillis(milliseconds)
+    }
+
+    @GetMapping('/status/{code}')
+    void status(@PathVariable int code) {
+        client.status(code)
     }
 }

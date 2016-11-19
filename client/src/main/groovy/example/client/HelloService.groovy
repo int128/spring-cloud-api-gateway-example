@@ -9,11 +9,7 @@ class HelloService {
     @Inject
     HelloClient client
 
-    Hello hello(String... args) {
-        if (args.length > 0) {
-            client.helloByName(args.join(','))
-        } else {
-            client.helloWorld()
-        }
+    void hello(String... args) {
+        client.waitMillis(3000)
     }
 }
