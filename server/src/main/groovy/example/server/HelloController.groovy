@@ -32,7 +32,8 @@ class HelloController {
 
     @GetMapping('/status/{code}')
     ResponseEntity status(@PathVariable int code) {
-        def httpStatus = HttpStatus.valueOf(code)
-        new ResponseEntity(httpStatus, httpStatus)
+        new ResponseEntity(
+            new ErrorResponse(code, "Intentionally $code raised"),
+            HttpStatus.valueOf(code))
     }
 }
