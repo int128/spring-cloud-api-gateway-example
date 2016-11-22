@@ -15,6 +15,7 @@ An example of API gateway with Spring Cloud.
   - Feign
   - Hystrix
   - Sleuth
+  - Zuul Proxy
 - `client`
   - A simple REST client
   - Feign

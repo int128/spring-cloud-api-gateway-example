@@ -1,6 +1,10 @@
 server:
   port: 8082
 
+logging:
+  level:
+    org.apache.http.wire: DEBUG
+
 hello.service:
   name: hello-service
   url: http://localhost:8081
@@ -8,3 +12,9 @@ hello.service:
 # https://github.com/Netflix/Hystrix/wiki/Configuration#execution.isolation.thread.timeoutInMilliseconds
 hystrix.command.default:
   execution.isolation.thread.timeoutInMilliseconds: 3000
+
+zuul:
+  routes:
+    hello:
+      path: /api/**
+      url: http://localhost:8081
