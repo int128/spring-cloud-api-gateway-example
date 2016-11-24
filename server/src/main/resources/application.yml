@@ -1,2 +1,7 @@
 server:
   port: 8081
+
+logging:
+  level:
+    # Spring MVC logging
+    org.springframework.web: DEBUG

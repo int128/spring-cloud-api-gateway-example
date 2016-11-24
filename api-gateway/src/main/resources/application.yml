@@ -3,6 +3,9 @@ server:
 
 logging:
   level:
+    # Spring MVC logging
+    org.springframework.web: DEBUG
+    # Zuul Proxy HTTP logging
     org.apache.http.wire: DEBUG
 
 hello.service:
