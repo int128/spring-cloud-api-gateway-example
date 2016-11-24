@@ -21,7 +21,7 @@ class HelloController {
 
     @GetMapping('/hello/{name}')
     Hello helloByName(@PathVariable String name) {
-        helloRepository.create('name')
+        helloRepository.create(name)
     }
 
     @GetMapping('/wait/{milliseconds}')
