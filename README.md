@@ -10,6 +10,7 @@ An example of API gateway with Spring Cloud.
   - Spring Boot Web
   - Sleuth
   - jackson-dataformat-xml (XML encoder and decoder)
+  - Global error handler serving JSON response (`AppErrorController`)
 - `api-gateway`
   - A couple of REST server and client
   - Spring Boot Web

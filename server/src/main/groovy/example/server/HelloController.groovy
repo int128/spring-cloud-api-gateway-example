@@ -1,8 +1,6 @@
 package example.server
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.HttpStatus
-import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
@@ -31,9 +29,7 @@ class HelloController {
     }
 
     @GetMapping('/status/{code}')
-    ResponseEntity status(@PathVariable int code) {
-        new ResponseEntity(
-            new ErrorResponse(code, "Intentionally $code raised"),
-            HttpStatus.valueOf(code))
+    void status(@PathVariable int code) {
+        throw new AppException(code, "Intentionally $code raised")
     }
 }
