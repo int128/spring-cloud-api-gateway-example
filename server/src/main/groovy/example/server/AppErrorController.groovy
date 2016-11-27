@@ -18,7 +18,7 @@ class AppErrorController implements ErrorController {
     @Autowired
     ErrorAttributes errorAttributes
 
-    @Value('${debug}')
+    @Value('${debug:false}')
     boolean debug
 
     @RequestMapping('/error')
