@@ -19,6 +19,7 @@ An example of API gateway with Spring Cloud.
   - Sleuth
   - Zuul Proxy
   - jackson-dataformat-xml (XML encoder and decoder)
+  - API Key Authentication (`WebSecurityConfig`)
 - `client`
   - A simple REST client
   - Feign

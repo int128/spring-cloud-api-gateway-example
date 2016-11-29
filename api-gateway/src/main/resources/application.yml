@@ -21,3 +21,9 @@ zuul:
     hello:
       path: /api/**
       url: http://localhost:8081
+
+authorities:
+  hello:
+  - x0w9zjiWDrgWWSzNnVCpr9WeIk95d0WZ
+  - yee8tfSEOP5lPJOd6akcon1FIFKwwok3
+  - 7cgcavhx1CxKCT9IoSqFryx15C5EpWaG
