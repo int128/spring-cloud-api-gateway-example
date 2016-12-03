@@ -9,18 +9,28 @@ logging:
     org.apache.http.wire: DEBUG
 
 hello.service:
-  name: hello-service
   url: http://localhost:8081
 
-# https://github.com/Netflix/Hystrix/wiki/Configuration#execution.isolation.thread.timeoutInMilliseconds
-hystrix.command.default:
-  execution.isolation.thread.timeoutInMilliseconds: 3000
+twitter.service:
+  url: https://api.twitter.com/1.1
+
+hystrix:
+  command.default:
+    # Do not use thread strategy for session scope.
+    # http://stackoverflow.com/questions/34677470/spring-feignclient-with-oauth2feignrequestinterceptor-not-working
+    execution.isolation.strategy: SEMAPHORE
+    execution.isolation.thread.timeoutInMilliseconds: 10000
 
 zuul:
   routes:
     hello:
       path: /api/**
       url: http://localhost:8081
+
+security:
+  oauth2:
+    twitter:
+      access-token-uri: https://api.twitter.com/oauth2/token
 
 authorities:
   hello:
