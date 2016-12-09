@@ -21,7 +21,7 @@ An example implementation of API gateway pattern using Spring Cloud.
   - Enable Feign client logging
   - Disable Hystrix
   - Enable Feign request interceptor for OAuth 2.0 client (`OAuth2FeignRequestInterceptor`)
-  - Example REST client for the API server using client credentials grant
+  - Example REST client for the API server using resource owner password grant
 - API client
   - Spring Boot without web server
   - Enable access token request logging
