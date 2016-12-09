@@ -3,8 +3,10 @@ server:
 
 logging:
   level:
-    # Spring MVC logging
-    org.springframework.web: DEBUG
+    # Enable API server logging
+    org.springframework.web.filter: DEBUG
+    # Enable API client logging
+    example.gateway.HelloClient: DEBUG
     # Zuul Proxy HTTP logging
     org.apache.http.wire: DEBUG
 

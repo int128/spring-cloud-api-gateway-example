@@ -1,4 +1,6 @@
-debug: true
+logging.level:
+  # Enable request logging
+  org.springframework.web.filter: DEBUG
 
 server:
   port: 8081
