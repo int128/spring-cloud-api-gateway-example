@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 
 @FeignClient(name = 'hello', url = '${hello.service.url}', configuration = HelloClientConfiguration)
-//@FeignClient(name = 'hello', url = '${hello.service.url}')
 interface HelloClient {
     @RequestMapping(value = '/hello', method = RequestMethod.GET)
     Hello helloWorld()
