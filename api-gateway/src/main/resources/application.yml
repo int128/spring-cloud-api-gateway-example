@@ -1,21 +1,30 @@
 server:
   port: 8082
 
-logging:
-  level:
-    # Enable API server logging
-    org.springframework.web.filter: DEBUG
-    # Enable API client logging
-    example.gateway.HelloClient: DEBUG
-    # Zuul Proxy HTTP logging
-    org.apache.http.wire: DEBUG
+logging.level:
+  # Enable request logging
+  org.springframework.web.filter: DEBUG
+  # Enable logging of access token request
+  org.springframework.web.client: DEBUG
+  # Enable request logging
+  example.gateway.HelloClient: DEBUG
+  # Zuul Proxy HTTP logging
+  org.apache.http.wire: DEBUG
 
 hello.service:
   url: http://localhost:8081
 
-# https://github.com/Netflix/Hystrix/wiki/Configuration#execution.isolation.thread.timeoutInMilliseconds
-hystrix.command.default:
-  execution.isolation.thread.timeoutInMilliseconds: 3000
+security:
+  basic:
+    enabled: false
+  oauth2:
+    hello:
+      access-token-uri: http://localhost:8081/oauth/token
+      client-id: theId
+      client-secret: theSecret
+      scope: theScope
+
+feign.hystrix.enabled: false
 
 zuul:
   routes:
