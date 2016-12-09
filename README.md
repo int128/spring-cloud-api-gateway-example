@@ -1,6 +1,6 @@
-# Spring Cloud API Gateway Example
+# API Gateway Implementation using Spring Cloud
 
-An example of API gateway with Spring Cloud.
+An example implementation of API gateway pattern using Spring Cloud.
 
 
 - API server
@@ -21,13 +21,11 @@ An example of API gateway with Spring Cloud.
   - Enable Feign client logging
   - Disable Hystrix
   - Enable Feign request interceptor for OAuth 2.0 client (`OAuth2FeignRequestInterceptor`)
-  - Example REST controller
+  - Example REST client for the API server using client credentials grant
 - API client
   - Spring Boot without web server
   - Enable access token request logging
   - Enable Feign client
   - Enable Feign client logging
   - Disable Hystrix
-  - Enable Feign request interceptor for OAuth 2.0 client (`OAuth2FeignRequestInterceptor`)
-  - Example REST client for the API server using resource owner password grant
-  - Example REST client for Twitter API using client credentials grant
+  - Example REST
